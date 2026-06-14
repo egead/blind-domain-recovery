@@ -11,13 +11,18 @@ Official code release for the paper:
 
 ## Overview
 
-This repository contains the implementation of the **Group-Equivariant Lifting Layer** — a neural network layer that simultaneously discovers the latent symmetry group and locality structure of data without supervision.
+This repository implements the method for **unsupervised latent domain recovery** via symmetry discovery. Many real-world observations arise from latent signals defined on structured domains (spatial grids, temporal sequences) that have been obscured by an unknown linear transformation — examples include permuted sensor networks, bit-scrambled images, and neural population recordings. The goal is to recover the latent domain and signals directly from unstructured, unordered observations, without any prior domain knowledge.
 
-Given observations drawn from an unknown group action on an unknown signal class, the model jointly learns:
-- A **lifting map** $L$ that embeds input data into a structured representation
-- The **generator** of the symmetry group that best explains the data's statistical structure
+The key insight is that **translation symmetry** of the data distribution encodes the latent domain structure. The framework models observations as linear measurements of latent signals and optimises a **lifting network** that jointly discovers:
+- The **symmetry action** — parameterised by commuting skew-symmetric generators of an Abelian Lie group
+- A **resolving filter** that maps observations to a group-indexed representation aligned with the latent domain
 
-The learning objective minimises **total correlation** and maximises **uniformity** of the lifted representation across group positions.
+Training is fully unsupervised with three objectives:
+- **Stationarity**: the lifted representation should be translation-invariant (JS-divergence between the distribution and its shifts)
+- **Resolution**: total correlation minimisation to align the output with the locally correlated latent field
+- **InfoMax**: joint entropy maximisation to prevent representation collapse
+
+The method operates directly on unordered vector observations — no domain coordinates required. Experiments cover stochastic processes, shuffled and bit-scrambled MNIST images, and real neural recordings from the Allen Brain Institute.
 
 ---
 
