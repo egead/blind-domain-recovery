@@ -1,0 +1,89 @@
+{
+    "NEUROPIXEL-EXP-0": {
+        "seed": 3,
+        "gpus": [
+            0
+        ],
+        "data_generator_params": {
+            "output_representation": "natural",
+            "features": [
+                {
+                    "type": "neural_npixel",
+                    "session_id": 732592105,
+                    "window_duration": 0.25,
+                    "cache_dir": "allen_data",
+                    "normalize_neurons": true,
+                    "spatial_frequency_filter": 0.04,
+                    "num_neurons": 110,
+                    "window_latency": 0.08
+                }
+            ],
+            "dims": 1,
+            "n_components": 110,
+            "noise_normalized_std": 0.0,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "dims": 1,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "use_linear_map": false,
+            "intrinsic_dimensionality": 6,
+            "lifting_space_dims": 125,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    30
+                ],
+                "num_resolution_filters": 1
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 7,
+                            "strides": 1,
+                            "activation": "elu"
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 5,
+                            "strides": 1,
+                            "activation": "elu"
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "activation": "elu"
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "activation": "elu"
+                        }
+                    ]
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 2.5,
+            "total_correlation_minimization_reg_coeff": 0.2,
+            "joint_entropy_maximization_reg_coeff": 0.2
+        },
+        "apply_stochastic_mixing": true,
+        "stochastic_mixing_steps": 20,
+        "stochastic_mixing_probability": 0.5,
+        "num_training_batches": 100,
+        "early_stop_epoch": 300,
+        "training_duration_in_epochs": 1000,
+        "model_optimizer_starting_lr": 1e-4,
+        "model_optimizer_ending_lr": 1e-5,
+        "estimators_optimizer_starting_lr": 1e-3,
+        "estimators_optimizer_ending_lr": 1e-4
+    }
+}

@@ -1,0 +1,2052 @@
+{
+    "GAUSSIAN-IDENTITY-EXP-0": {
+        "seed": 0,
+        "gpus": [
+            0
+        ],
+        "data_generator_params": {
+            "output_representation": "natural",
+            "features": [
+                {
+                    "type": "gaussian",
+                    "scale_min": 0.5,
+                    "scale_max": 2.5,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "GAUSSIAN-IDENTITY-EXP-1": {
+        "seed": 1,
+        "gpus": [
+            0
+        ],
+        "data_generator_params": {
+            "output_representation": "natural",
+            "features": [
+                {
+                    "type": "gaussian",
+                    "scale_min": 0.5,
+                    "scale_max": 2.5,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "GAUSSIAN-IDENTITY-EXP-2": {
+        "seed": 2,
+        "gpus": [
+            0
+        ],
+        "data_generator_params": {
+            "output_representation": "natural",
+            "features": [
+                {
+                    "type": "gaussian",
+                    "scale_min": 0.5,
+                    "scale_max": 2.5,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "GAUSSIAN-IDENTITY-EXP-3": {
+        "seed": 3,
+        "gpus": [
+            0
+        ],
+        "data_generator_params": {
+            "output_representation": "natural",
+            "features": [
+                {
+                    "type": "gaussian",
+                    "scale_min": 0.5,
+                    "scale_max": 2.5,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "GAUSSIAN-IDENTITY-EXP-4": {
+        "seed": 4,
+        "gpus": [
+            0
+        ],
+        "data_generator_params": {
+            "output_representation": "natural",
+            "features": [
+                {
+                    "type": "gaussian",
+                    "scale_min": 0.5,
+                    "scale_max": 2.5,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "GAUSSIAN-DST-EXP-0": {
+        "seed": 0,
+        "gpus": [
+            1
+        ],
+        "data_generator_params": {
+            "output_representation": "dst",
+            "features": [
+                {
+                    "type": "gaussian",
+                    "scale_min": 0.5,
+                    "scale_max": 2.5,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "GAUSSIAN-DST-EXP-1": {
+        "seed": 1,
+        "gpus": [
+            1
+        ],
+        "data_generator_params": {
+            "output_representation": "dst",
+            "features": [
+                {
+                    "type": "gaussian",
+                    "scale_min": 0.5,
+                    "scale_max": 2.5,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "GAUSSIAN-DST-EXP-2": {
+        "seed": 2,
+        "gpus": [
+            1
+        ],
+        "data_generator_params": {
+            "output_representation": "dst",
+            "features": [
+                {
+                    "type": "gaussian",
+                    "scale_min": 0.5,
+                    "scale_max": 2.5,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "GAUSSIAN-DST-EXP-3": {
+        "seed": 3,
+        "gpus": [
+            1
+        ],
+        "data_generator_params": {
+            "output_representation": "dst",
+            "features": [
+                {
+                    "type": "gaussian",
+                    "scale_min": 0.5,
+                    "scale_max": 2.5,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "GAUSSIAN-DST-EXP-4": {
+        "seed": 4,
+        "gpus": [
+            1
+        ],
+        "data_generator_params": {
+            "output_representation": "dst",
+            "features": [
+                {
+                    "type": "gaussian",
+                    "scale_min": 0.5,
+                    "scale_max": 2.5,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "LEGENDRE-IDENTITY-EXP-0": {
+        "seed": 0,
+        "gpus": [
+            2
+        ],
+        "data_generator_params": {
+            "output_representation": "natural",
+            "features": [
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 3,
+                    "m": 1
+                },
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 2,
+                    "m": 1
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "LEGENDRE-IDENTITY-EXP-1": {
+        "seed": 1,
+        "gpus": [
+            2
+        ],
+        "data_generator_params": {
+            "output_representation": "natural",
+            "features": [
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 3,
+                    "m": 1
+                },
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 2,
+                    "m": 1
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "LEGENDRE-IDENTITY-EXP-2": {
+        "seed": 2,
+        "gpus": [
+            2
+        ],
+        "data_generator_params": {
+            "output_representation": "natural",
+            "features": [
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 3,
+                    "m": 1
+                },
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 2,
+                    "m": 1
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "LEGENDRE-IDENTITY-EXP-3": {
+        "seed": 3,
+        "gpus": [
+            2
+        ],
+        "data_generator_params": {
+            "output_representation": "natural",
+            "features": [
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 3,
+                    "m": 1
+                },
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 2,
+                    "m": 1
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "LEGENDRE-IDENTITY-EXP-4": {
+        "seed": 4,
+        "gpus": [
+            2
+        ],
+        "data_generator_params": {
+            "output_representation": "natural",
+            "features": [
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 3,
+                    "m": 1
+                },
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 2,
+                    "m": 1
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "LEGENDRE-DST-EXP-0": {
+        "seed": 0,
+        "gpus": [
+            3
+        ],
+        "data_generator_params": {
+            "output_representation": "dst",
+            "features": [
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 3,
+                    "m": 1
+                },
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 2,
+                    "m": 1
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "LEGENDRE-DST-EXP-1": {
+        "seed": 1,
+        "gpus": [
+            3
+        ],
+        "data_generator_params": {
+            "output_representation": "dst",
+            "features": [
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 3,
+                    "m": 1
+                },
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 2,
+                    "m": 1
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "LEGENDRE-DST-EXP-2": {
+        "seed": 2,
+        "gpus": [
+            3
+        ],
+        "data_generator_params": {
+            "output_representation": "dst",
+            "features": [
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 3,
+                    "m": 1
+                },
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 2,
+                    "m": 1
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "LEGENDRE-DST-EXP-3": {
+        "seed": 3,
+        "gpus": [
+            3
+        ],
+        "data_generator_params": {
+            "output_representation": "dst",
+            "features": [
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 3,
+                    "m": 1
+                },
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 2,
+                    "m": 1
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    },
+    "LEGENDRE-DST-EXP-4": {
+        "seed": 4,
+        "gpus": [
+            3
+        ],
+        "data_generator_params": {
+            "output_representation": "dst",
+            "features": [
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 3,
+                    "m": 1
+                },
+                {
+                    "type": "legendre",
+                    "scale_min": 6.0,
+                    "scale_max": 15.0,
+                    "amplitude_min": 0.5,
+                    "amplitude_max": 1.5,
+                    "l": 2,
+                    "m": 1
+                }
+            ],
+            "dims": 1,
+            "noise_normalized_std": 0.05,
+            "n_components": 63,
+            "batch_size": 2500
+        },
+        "model_params": {
+            "covariance_shift": 1e-05,
+            "tcr_noise_var": 1e-05,
+            "use_linear_map": false,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "normalization_noise": [
+                null
+            ],
+            "lifting_space_dims": 99,
+            "lifting_layer_params": {
+                "axes_widths": [
+                    63
+                ],
+                "use_spectral_lifting": true,
+                "lifting_offset_limit": 0.5
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 1,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 2,
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "pooling": true
+                        }
+                    ]
+                }
+            ],
+            "probability_estimator_params": [
+                {
+                    "num_kernels": 4
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.5,
+            "joint_entropy_maximization_reg_coeff": 0.5
+        },
+        "model_global_gradclip": 0.5,
+        "estimator_global_gradclip": 0.5,
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 10000,
+        "model_optimizer_starting_lr": 0.00025,
+        "model_optimizer_ending_lr": 2.5e-05,
+        "estimators_optimizer_starting_lr": 0.0025,
+        "estimators_optimizer_ending_lr": 0.00025
+    }
+}

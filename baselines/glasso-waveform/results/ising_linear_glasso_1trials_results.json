@@ -1,0 +1,329 @@
+{
+    "config": {
+        "feature": "ising",
+        "output_representation": "linear",
+        "baselines": [
+            "glasso"
+        ],
+        "n_trials": 1,
+        "base_seed": 0,
+        "n_components": 63,
+        "n_total_samples": 500000,
+        "batch_size": 5000,
+        "n_val_metrics": 500,
+        "alphas": [
+            0.01,
+            0.02,
+            0.04,
+            0.08,
+            0.16,
+            0.32,
+            0.64,
+            1.28,
+            2.56,
+            5.12,
+            10.24
+        ],
+        "spectral_modes": [
+            "rotate",
+            "recolor"
+        ],
+        "spectral_gammas": [
+            0.03,
+            0.1,
+            0.3,
+            1.0,
+            3.0,
+            10.0,
+            30.0
+        ],
+        "spectral_powers": [
+            0.5,
+            1.0,
+            2.0
+        ],
+        "diagonal_loading": 0.01
+    },
+    "best_configuration": "glasso_alpha=1.28",
+    "summary": {
+        "glasso_alpha=0.01": {
+            "baseline": "glasso",
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.2965355954097244,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.06998465167421945,
+            "mean_correlation_variance_across_samples": 0.004897851469961827,
+            "alpha": 0.01,
+            "frob_error_mean_across_trials": 16.031442902296327,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "glasso_alpha=0.02": {
+            "baseline": "glasso",
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.287871725953107,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.06377600681738874,
+            "mean_correlation_variance_across_samples": 0.004067379045571615,
+            "alpha": 0.02,
+            "frob_error_mean_across_trials": 11.113186749247348,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "glasso_alpha=0.04": {
+            "baseline": "glasso",
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.2477688065433681,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.06172415687199036,
+            "mean_correlation_variance_across_samples": 0.0038098715415580743,
+            "alpha": 0.04,
+            "frob_error_mean_across_trials": 16.745408377956057,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "glasso_alpha=0.08": {
+            "baseline": "glasso",
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.2999597865928522,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.06443865251832831,
+            "mean_correlation_variance_across_samples": 0.0041523399383778595,
+            "alpha": 0.08,
+            "frob_error_mean_across_trials": 13.228451924886748,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "glasso_alpha=0.16": {
+            "baseline": "glasso",
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.2945092686478971,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.06533448722133883,
+            "mean_correlation_variance_across_samples": 0.004268595220475287,
+            "alpha": 0.16,
+            "frob_error_mean_across_trials": 24.824403593531382,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "glasso_alpha=0.32": {
+            "baseline": "glasso",
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.10602198773177307,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.041718929337723865,
+            "mean_correlation_variance_across_samples": 0.001740469065085997,
+            "alpha": 0.32,
+            "frob_error_mean_across_trials": 3842943.9595280276,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "glasso_alpha=0.64": {
+            "baseline": "glasso",
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.27322627686601547,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.07214161341815592,
+            "mean_correlation_variance_across_samples": 0.005204412386574654,
+            "alpha": 0.64,
+            "frob_error_mean_across_trials": 1470324365.9355688,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "glasso_alpha=1.28": {
+            "baseline": "glasso",
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.35275874208112223,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.06611068271786184,
+            "mean_correlation_variance_across_samples": 0.004370622369421797,
+            "alpha": 1.28,
+            "frob_error_mean_across_trials": 1918332594.283489,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "glasso_alpha=10.24": {
+            "baseline": "glasso",
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.35275874208112223,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.06611068271786184,
+            "mean_correlation_variance_across_samples": 0.004370622369421797,
+            "alpha": 10.24,
+            "frob_error_mean_across_trials": 1918332594.283489,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "glasso_alpha=2.56": {
+            "baseline": "glasso",
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.35275874208112223,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.06611068271786184,
+            "mean_correlation_variance_across_samples": 0.004370622369421797,
+            "alpha": 2.56,
+            "frob_error_mean_across_trials": 1918332594.283489,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "glasso_alpha=5.12": {
+            "baseline": "glasso",
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.35275874208112223,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.06611068271786184,
+            "mean_correlation_variance_across_samples": 0.004370622369421797,
+            "alpha": 5.12,
+            "frob_error_mean_across_trials": 1918332594.283489,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        }
+    },
+    "trials": {
+        "trial_000": {
+            "glasso_alpha=0.01": {
+                "success": true,
+                "baseline": "glasso",
+                "alpha": 0.01,
+                "frob_error": 16.031442902296327,
+                "correlation_mean": 0.2965355954097244,
+                "correlation_std_across_samples": 0.06998465167421945,
+                "correlation_variance_across_samples": 0.004897851469961827,
+                "correlation_min": 0.0,
+                "correlation_max": 0.5807362220496742
+            },
+            "glasso_alpha=0.02": {
+                "success": true,
+                "baseline": "glasso",
+                "alpha": 0.02,
+                "frob_error": 11.113186749247348,
+                "correlation_mean": 0.287871725953107,
+                "correlation_std_across_samples": 0.06377600681738874,
+                "correlation_variance_across_samples": 0.004067379045571615,
+                "correlation_min": 0.0,
+                "correlation_max": 0.48332173211742174
+            },
+            "glasso_alpha=0.04": {
+                "success": true,
+                "baseline": "glasso",
+                "alpha": 0.04,
+                "frob_error": 16.745408377956057,
+                "correlation_mean": 0.2477688065433681,
+                "correlation_std_across_samples": 0.06172415687199036,
+                "correlation_variance_across_samples": 0.0038098715415580743,
+                "correlation_min": 0.0,
+                "correlation_max": 0.4315265217129591
+            },
+            "glasso_alpha=0.08": {
+                "success": true,
+                "baseline": "glasso",
+                "alpha": 0.08,
+                "frob_error": 13.228451924886748,
+                "correlation_mean": 0.2999597865928522,
+                "correlation_std_across_samples": 0.06443865251832831,
+                "correlation_variance_across_samples": 0.0041523399383778595,
+                "correlation_min": 0.0,
+                "correlation_max": 0.5076022408764665
+            },
+            "glasso_alpha=0.16": {
+                "success": true,
+                "baseline": "glasso",
+                "alpha": 0.16,
+                "frob_error": 24.824403593531382,
+                "correlation_mean": 0.2945092686478971,
+                "correlation_std_across_samples": 0.06533448722133883,
+                "correlation_variance_across_samples": 0.004268595220475287,
+                "correlation_min": 0.0,
+                "correlation_max": 0.4738100856281255
+            },
+            "glasso_alpha=0.32": {
+                "success": true,
+                "baseline": "glasso",
+                "alpha": 0.32,
+                "frob_error": 3842943.9595280276,
+                "correlation_mean": 0.10602198773177307,
+                "correlation_std_across_samples": 0.041718929337723865,
+                "correlation_variance_across_samples": 0.001740469065085997,
+                "correlation_min": 0.0,
+                "correlation_max": 0.2956095775770568
+            },
+            "glasso_alpha=0.64": {
+                "success": true,
+                "baseline": "glasso",
+                "alpha": 0.64,
+                "frob_error": 1470324365.9355688,
+                "correlation_mean": 0.27322627686601547,
+                "correlation_std_across_samples": 0.07214161341815592,
+                "correlation_variance_across_samples": 0.005204412386574654,
+                "correlation_min": 0.0,
+                "correlation_max": 0.5135804065155352
+            },
+            "glasso_alpha=1.28": {
+                "success": true,
+                "baseline": "glasso",
+                "alpha": 1.28,
+                "frob_error": 1918332594.283489,
+                "correlation_mean": 0.35275874208112223,
+                "correlation_std_across_samples": 0.06611068271786184,
+                "correlation_variance_across_samples": 0.004370622369421797,
+                "correlation_min": 0.0,
+                "correlation_max": 0.5598096342109445
+            },
+            "glasso_alpha=2.56": {
+                "success": true,
+                "baseline": "glasso",
+                "alpha": 2.56,
+                "frob_error": 1918332594.283489,
+                "correlation_mean": 0.35275874208112223,
+                "correlation_std_across_samples": 0.06611068271786184,
+                "correlation_variance_across_samples": 0.004370622369421797,
+                "correlation_min": 0.0,
+                "correlation_max": 0.5598096342109445
+            },
+            "glasso_alpha=5.12": {
+                "success": true,
+                "baseline": "glasso",
+                "alpha": 5.12,
+                "frob_error": 1918332594.283489,
+                "correlation_mean": 0.35275874208112223,
+                "correlation_std_across_samples": 0.06611068271786184,
+                "correlation_variance_across_samples": 0.004370622369421797,
+                "correlation_min": 0.0,
+                "correlation_max": 0.5598096342109445
+            },
+            "glasso_alpha=10.24": {
+                "success": true,
+                "baseline": "glasso",
+                "alpha": 10.24,
+                "frob_error": 1918332594.283489,
+                "correlation_mean": 0.35275874208112223,
+                "correlation_std_across_samples": 0.06611068271786184,
+                "correlation_variance_across_samples": 0.004370622369421797,
+                "correlation_min": 0.0,
+                "correlation_max": 0.5598096342109445
+            }
+        }
+    }
+}

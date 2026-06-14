@@ -1,0 +1,86 @@
+{
+    "mnist15x15-permuted-tica_lr_1e-2_pool_3": {
+        "gpus": [
+            0
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "grid_x_size": 15,
+        "grid_y_size": 15,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "learning_rate": 0.01,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "mnist15x15-permuted-tica_lr_1e-2_pool_5": {
+        "gpus": [
+            1
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "grid_x_size": 15,
+        "grid_y_size": 15,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "learning_rate": 0.01,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "mnist15x15-permuted-tica_lr_1e-3_pool_3": {
+        "gpus": [
+            2
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "grid_x_size": 15,
+        "grid_y_size": 15,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "learning_rate": 0.001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "mnist15x15-permuted-tica_lr_1e-3_pool_5": {
+        "gpus": [
+            3
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "grid_x_size": 15,
+        "grid_y_size": 15,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "learning_rate": 0.001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "mnist15x15-permuted-tica_lr_1e-4_pool_3": {
+        "gpus": [
+            0
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "grid_x_size": 15,
+        "grid_y_size": 15,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "learning_rate": 0.0001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "mnist15x15-permuted-tica_lr_1e-4_pool_5": {
+        "gpus": [
+            1
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "grid_x_size": 15,
+        "grid_y_size": 15,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "learning_rate": 0.0001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    }
+}

@@ -1,0 +1,123 @@
+{
+    "config": {
+        "dataset": "mnist",
+        "matching_method": "faq",
+        "output_representation": "permuted",
+        "orthogonal": true,
+        "n_trials": 1,
+        "base_seed": 0,
+        "n_total_samples": 50000,
+        "batch_size": 5000,
+        "n_val_metrics": 500,
+        "alphas": [
+            0.01,
+            0.05,
+            0.25,
+            1.25,
+            6.25
+        ],
+        "diagonal_loading": 0.01,
+        "H": 15,
+        "W": 15
+    },
+    "summary": {
+        "0.01": {
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.16209380932841838,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.04982983188010585,
+            "mean_correlation_variance_across_samples": 0.0024830121451996133,
+            "frob_error_mean_across_trials": 94.55157470703125,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "0.05": {
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.20598771084636117,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.06301901879420015,
+            "mean_correlation_variance_across_samples": 0.003971396729783752,
+            "frob_error_mean_across_trials": 64.97692108154297,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "0.25": {
+            "n_successful_trials": 0,
+            "failed_trials": [
+                "trial_000"
+            ]
+        },
+        "1.25": {
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.1082730941138301,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.03472739683324074,
+            "mean_correlation_variance_across_samples": 0.001205992090813379,
+            "frob_error_mean_across_trials": 28.98275375366211,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        },
+        "6.25": {
+            "n_successful_trials": 1,
+            "failed_trials": [],
+            "correlation_mean_across_trials": 0.1082730941138301,
+            "correlation_std_across_trials": 0.0,
+            "correlation_variance_across_trials": 0.0,
+            "mean_correlation_std_across_samples": 0.03472739683324074,
+            "mean_correlation_variance_across_samples": 0.001205992090813379,
+            "frob_error_mean_across_trials": 28.98275375366211,
+            "frob_error_std_across_trials": 0.0,
+            "frob_error_variance_across_trials": 0.0
+        }
+    },
+    "trials": {
+        "trial_000": {
+            "0.01": {
+                "success": true,
+                "frob_error": 94.55157470703125,
+                "correlation_mean": 0.16209380932841838,
+                "correlation_std_across_samples": 0.04982983188010585,
+                "correlation_variance_across_samples": 0.0024830121451996133,
+                "correlation_min": 0.04274362173394264,
+                "correlation_max": 0.40684419566347013
+            },
+            "0.05": {
+                "success": true,
+                "frob_error": 64.97692108154297,
+                "correlation_mean": 0.20598771084636117,
+                "correlation_std_across_samples": 0.06301901879420015,
+                "correlation_variance_across_samples": 0.003971396729783752,
+                "correlation_min": 0.06784954222655311,
+                "correlation_max": 0.41142135242161215
+            },
+            "0.25": {
+                "success": false,
+                "error": "Non SPD result: the system is too ill-conditioned for this solver. The system is too ill-conditioned for this solver"
+            },
+            "1.25": {
+                "success": true,
+                "frob_error": 28.98275375366211,
+                "correlation_mean": 0.1082730941138301,
+                "correlation_std_across_samples": 0.03472739683324074,
+                "correlation_variance_across_samples": 0.001205992090813379,
+                "correlation_min": 0.027585442666029084,
+                "correlation_max": 0.26771853882290125
+            },
+            "6.25": {
+                "success": true,
+                "frob_error": 28.98275375366211,
+                "correlation_mean": 0.1082730941138301,
+                "correlation_std_across_samples": 0.03472739683324074,
+                "correlation_variance_across_samples": 0.001205992090813379,
+                "correlation_min": 0.027585442666029084,
+                "correlation_max": 0.26771853882290125
+            }
+        }
+    }
+}

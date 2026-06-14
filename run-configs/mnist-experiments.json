@@ -1,0 +1,317 @@
+{
+    "MNIST-EXP-0": {
+        "seed": 7,
+        "gpus": [
+            0
+        ],
+        "data_generator_params": {
+            "output_representation": "permuted",
+            "latent_x_dims": 15,
+            "latent_y_dims": 15,
+            "features": [
+                {
+                    "type": "mnist",
+                    "max_random_translation": 27,
+                    "blackout_probability": 0.0,
+                    "shading_probability": 0.0,
+                    "shaded_pixel_relative_intensity": 1.0,
+                    "blackout_mask_seed": 0,
+                    "shading_mask_seed": 0,
+                    "give_bittensor": false
+                }
+            ],
+            "dims": 2,
+            "use_circulant_translations": false,
+            "noise_normalized_std": 0.0,
+            "batch_size": 2500,
+            "flatten_output": true
+        },
+        "model_params": {
+            "dims": 2,
+            "covariance_shift": 1e-5,
+            "tcr_noise_var": 1e-5,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "use_svd_pv_computation": "eigh",
+            "lifting_space_dims": 325,
+            "lifting_layer_params": {
+                "use_spectral_lifting": true,
+                "axes_widths": [
+                    15,
+                    15
+                ],
+                "num_resolution_filters": 1
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 2,
+                    "max_spectral_norm": 10,
+                    "use_stochastic_pooling": true,
+                    "use_input_embedding": true,
+                    "embedding_dim": 4,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": [
+                                5,
+                                5
+                            ],
+                            "strides": [
+                                2,
+                                2
+                            ],
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": [
+                                3,
+                                3
+                            ],
+                            "strides": [
+                                1,
+                                1
+                            ],
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": [
+                                3,
+                                3
+                            ],
+                            "strides": [
+                                1,
+                                1
+                            ],
+                            "pooling": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.2,
+            "joint_entropy_maximization_reg_coeff": 0.15
+        },
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 15000,
+        "model_optimizer_starting_lr": 0.0001,
+        "model_optimizer_ending_lr": 1e-05,
+        "estimators_optimizer_starting_lr": 0.001,
+        "estimators_optimizer_ending_lr": 0.0001
+    },
+    "MNIST-EXP-1": {
+        "seed": 39,
+        "gpus": [
+            1
+        ],
+        "data_generator_params": {
+            "output_representation": "permuted",
+            "latent_x_dims": 15,
+            "latent_y_dims": 15,
+            "features": [
+                {
+                    "type": "mnist",
+                    "max_random_translation": 27,
+                    "blackout_probability": 0.0,
+                    "shading_probability": 0.0,
+                    "shaded_pixel_relative_intensity": 1.0,
+                    "blackout_mask_seed": 0,
+                    "shading_mask_seed": 0,
+                    "give_bittensor": false
+                }
+            ],
+            "dims": 2,
+            "use_circulant_translations": false,
+            "noise_normalized_std": 0.0,
+            "batch_size": 2500,
+            "flatten_output": true
+        },
+        "model_params": {
+            "dims": 2,
+            "covariance_shift": 1e-5,
+            "tcr_noise_var": 1e-5,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "use_svd_pv_computation": "eigh",
+            "lifting_space_dims": 325,
+            "lifting_layer_params": {
+                "use_spectral_lifting": true,
+                "axes_widths": [
+                    15,
+                    15
+                ],
+                "num_resolution_filters": 1
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 2,
+                    "max_spectral_norm": 10,
+                    "use_stochastic_pooling": true,
+                    "use_input_embedding": true,
+                    "embedding_dim": 4,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": [
+                                5,
+                                5
+                            ],
+                            "strides": [
+                                2,
+                                2
+                            ],
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": [
+                                3,
+                                3
+                            ],
+                            "strides": [
+                                1,
+                                1
+                            ],
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": [
+                                3,
+                                3
+                            ],
+                            "strides": [
+                                1,
+                                1
+                            ],
+                            "pooling": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.2,
+            "joint_entropy_maximization_reg_coeff": 0.15
+        },
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 15000,
+        "model_optimizer_starting_lr": 0.0001,
+        "model_optimizer_ending_lr": 1e-05,
+        "estimators_optimizer_starting_lr": 0.001,
+        "estimators_optimizer_ending_lr": 0.0001
+    },
+    "MNIST-EXP-2": {
+        "seed": 47,
+        "gpus": [
+            2
+        ],
+        "data_generator_params": {
+            "output_representation": "permuted",
+            "latent_x_dims": 15,
+            "latent_y_dims": 15,
+            "features": [
+                {
+                    "type": "mnist",
+                    "max_random_translation": 27,
+                    "blackout_probability": 0.0,
+                    "shading_probability": 0.0,
+                    "shaded_pixel_relative_intensity": 1.0,
+                    "blackout_mask_seed": 0,
+                    "shading_mask_seed": 0,
+                    "give_bittensor": false
+                }
+            ],
+            "dims": 2,
+            "use_circulant_translations": false,
+            "noise_normalized_std": 0.0,
+            "batch_size": 2500,
+            "flatten_output": true
+        },
+        "model_params": {
+            "dims": 2,
+            "covariance_shift": 1e-5,
+            "tcr_noise_var": 1e-5,
+            "num_lenses": 1,
+            "dilations": [
+                1
+            ],
+            "use_svd_pv_computation": "eigh",
+            "lifting_space_dims": 325,
+            "lifting_layer_params": {
+                "use_spectral_lifting": true,
+                "axes_widths": [
+                    15,
+                    15
+                ],
+                "num_resolution_filters": 1
+            },
+            "uniformity_estimator_params": [
+                {
+                    "group_dims": 2,
+                    "max_spectral_norm": 10,
+                    "use_stochastic_pooling": true,
+                    "use_input_embedding": true,
+                    "embedding_dim": 4,
+                    "layer_properties": [
+                        {
+                            "filters": 4,
+                            "kernel_size": [
+                                5,
+                                5
+                            ],
+                            "strides": [
+                                2,
+                                2
+                            ],
+                            "pooling": false
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": [
+                                3,
+                                3
+                            ],
+                            "strides": [
+                                1,
+                                1
+                            ],
+                            "pooling": true
+                        },
+                        {
+                            "filters": 8,
+                            "kernel_size": [
+                                3,
+                                3
+                            ],
+                            "strides": [
+                                1,
+                                1
+                            ],
+                            "pooling": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "model_loss_coeffs": {
+            "uniformity_maximization_reg_coeff": 1.0,
+            "total_correlation_minimization_reg_coeff": 0.2,
+            "joint_entropy_maximization_reg_coeff": 0.15
+        },
+        "num_training_batches": 100,
+        "training_duration_in_epochs": 15000,
+        "model_optimizer_starting_lr": 0.0001,
+        "model_optimizer_ending_lr": 1e-05,
+        "estimators_optimizer_starting_lr": 0.001,
+        "estimators_optimizer_ending_lr": 0.0001
+    }
+}

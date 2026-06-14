@@ -1,0 +1,386 @@
+{
+    "gauss-identity-lr_1e-2_pool_3": {
+        "gpus": [
+            0
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "natural",
+        "feature_type": "gaussian",
+        "learning_rate": 0.01,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "gauss-identity-lr_1e-2_pool_5": {
+        "gpus": [
+            1
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "natural",
+        "feature_type": "gaussian",
+        "learning_rate": 0.01,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "gauss-identity-lr_1e-3_pool_3": {
+        "gpus": [
+            2
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "natural",
+        "feature_type": "gaussian",
+        "learning_rate": 0.001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "gauss-identity-lr_1e-3_pool_5": {
+        "gpus": [
+            3
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "natural",
+        "feature_type": "gaussian",
+        "learning_rate": 0.001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "gauss-identity-lr_1e-4_pool_3": {
+        "gpus": [
+            0
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "natural",
+        "feature_type": "gaussian",
+        "learning_rate": 0.0001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "gauss-identity-lr_1e-4_pool_5": {
+        "gpus": [
+            1
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "natural",
+        "feature_type": "gaussian",
+        "learning_rate": 0.0001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "gauss-dst-lr_1e-2_pool_3": {
+        "gpus": [
+            2
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "dst",
+        "feature_type": "gaussian",
+        "learning_rate": 0.01,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "gauss-dst-lr_1e-2_pool_5": {
+        "gpus": [
+            3
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "dst",
+        "feature_type": "gaussian",
+        "learning_rate": 0.01,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "gauss-dst-lr_1e-3_pool_3": {
+        "gpus": [
+            0
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "dst",
+        "feature_type": "gaussian",
+        "learning_rate": 0.001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "gauss-dst-lr_1e-3_pool_5": {
+        "gpus": [
+            1
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "dst",
+        "feature_type": "gaussian",
+        "learning_rate": 0.001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "gauss-dst-lr_1e-4_pool_3": {
+        "gpus": [
+            2
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "dst",
+        "feature_type": "gaussian",
+        "learning_rate": 0.0001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "gauss-dst-lr_1e-4_pool_5": {
+        "gpus": [
+            3
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "dst",
+        "feature_type": "gaussian",
+        "learning_rate": 0.0001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "legendre-identity-lr_1e-2_pool_3": {
+        "gpus": [
+            0
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "natural",
+        "feature_type": "legendre",
+        "learning_rate": 0.01,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "legendre-identity-lr_1e-2_pool_5": {
+        "gpus": [
+            1
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "natural",
+        "feature_type": "legendre",
+        "learning_rate": 0.01,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "legendre-identity-lr_1e-3_pool_3": {
+        "gpus": [
+            2
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "natural",
+        "feature_type": "legendre",
+        "learning_rate": 0.001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "legendre-identity-lr_1e-3_pool_5": {
+        "gpus": [
+            3
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "natural",
+        "feature_type": "legendre",
+        "learning_rate": 0.001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "legendre-identity-lr_1e-4_pool_3": {
+        "gpus": [
+            0
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "natural",
+        "feature_type": "legendre",
+        "learning_rate": 0.0001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "legendre-identity-lr_1e-4_pool_5": {
+        "gpus": [
+            1
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "natural",
+        "feature_type": "legendre",
+        "learning_rate": 0.0001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "legendre-dst-lr_1e-2_pool_3": {
+        "gpus": [
+            2
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "dst",
+        "feature_type": "legendre",
+        "learning_rate": 0.01,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "legendre-dst-lr_1e-2_pool_5": {
+        "gpus": [
+            3
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "dst",
+        "feature_type": "legendre",
+        "learning_rate": 0.01,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "legendre-dst-lr_1e-3_pool_3": {
+        "gpus": [
+            0
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "dst",
+        "feature_type": "legendre",
+        "learning_rate": 0.001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "legendre-dst-lr_1e-3_pool_5": {
+        "gpus": [
+            1
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "dst",
+        "feature_type": "legendre",
+        "learning_rate": 0.001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "legendre-dst-lr_1e-4_pool_3": {
+        "gpus": [
+            2
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 3,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "dst",
+        "feature_type": "legendre",
+        "learning_rate": 0.0001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    },
+    "legendre-dst-lr_1e-4_pool_5": {
+        "gpus": [
+            3
+        ],
+        "seed": 42,
+        "batch_size": 250,
+        "n_components": 63,
+        "pool_size": 5,
+        "use_orthogonal": true,
+        "is_circulant": false,
+        "output_representation": "dst",
+        "feature_type": "legendre",
+        "learning_rate": 0.0001,
+        "epochs": 1500,
+        "steps_per_epoch": 1000
+    }
+}
