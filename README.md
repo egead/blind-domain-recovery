@@ -1,8 +1,8 @@
-# Revealing Latent Domains via Unsupervised Symmetry Discovery
+# Blind Recovery of Latent Domains via Unsupervised Symmetry Discovery
 
 Official code release for the paper:
 
-> **Revealing Latent Domains via Unsupervised Symmetry Discovery**  
+> **Blind Recovery of Latent Domains via Unsupervised Symmetry Discovery**  
 > Onur Efe, Arkadas Özakın  
 > Preprint, 2026  
 > [arXiv link coming soon]
@@ -11,9 +11,9 @@ Official code release for the paper:
 
 ## Overview
 
-This repository implements the method for **unsupervised latent domain recovery** via symmetry discovery. Many real-world observations arise from latent signals defined on structured domains (spatial grids, temporal sequences) that have been obscured by an unknown linear transformation — examples include permuted sensor networks, bit-scrambled images, and neural population recordings. The goal is to recover the latent domain and signals directly from unstructured, unordered observations, without any prior domain knowledge.
+This repository implements an unsupervised framework for **blind recovery of latent domains and signals** via symmetry discovery. The primary motivation is blind inverse problems: recovering signals of interest from corrupted observations without knowing the obfuscating mechanism. Blind deconvolution handles convolutional corruptions, but fails when general linear transformations destroy the apparent geometry of the data — as in permuted sensor networks, bit-scrambled images, and neural population recordings. In these cases, recovering the signal also requires recovering the latent domain it lives on.
 
-The key insight is that **translation symmetry** of the data distribution encodes the latent domain structure. The framework models observations as linear measurements of latent signals and optimises a **lifting network** that jointly discovers:
+The key insight is that **translation symmetry** of the data distribution encodes the latent domain structure. The framework models observations as linear measurements of signals sampled from a latent random field, and optimises a **lifting network** that jointly discovers:
 - The **symmetry action** — parameterised by commuting skew-symmetric generators of an Abelian Lie group
 - A **resolving filter** that maps observations to a group-indexed representation aligned with the latent domain
 
@@ -22,15 +22,15 @@ Training is fully unsupervised with three objectives:
 - **Resolution**: total correlation minimisation to align the output with the locally correlated latent field
 - **InfoMax**: joint entropy maximisation to prevent representation collapse
 
-The method operates directly on unordered vector observations — no domain coordinates required. Experiments cover stochastic processes, shuffled and bit-scrambled MNIST images, and real neural recordings from the Allen Brain Institute.
+The method operates directly on unordered vector observations — no domain coordinates required. Experiments cover stochastic processes, Ising models, shuffled and bit-scrambled MNIST images, and real neural recordings from the Allen Brain Institute.
 
 ---
 
 ## Quick start
 
 ```bash
-git clone <this-repo>
-cd LatentDomainRecovery-release
+git clone https://github.com/onurefe/blind-domain-recovery.git
+cd blind-domain-recovery
 pip install -r requirements.txt
 jupyter notebook notebooks/quickstart.ipynb
 ```
@@ -40,7 +40,7 @@ jupyter notebook notebooks/quickstart.ipynb
 ## Repository structure
 
 ```
-LatentDomainRecovery-release/
+blind-domain-recovery/
 ├── core/                          # Main library
 │   ├── lifting_layer.py           # LiftingLayer: group-equivariant spectral lifting
 │   ├── models.py                  # Full model (lifting + uniformity/TC losses)
@@ -84,7 +84,7 @@ LatentDomainRecovery-release/
 |---|---|---|
 | `quickstart.ipynb` | Minimal demo: train on 1-D Gaussians, inspect learned generators | ~5 min |
 | `train.ipynb` | Full training run from any `run-configs/*.json` | hours |
-| `evaluate.ipynb` | Load a checkpoint, visualise lifting map, measure circulant alignment | seconds |
+| `evaluate.ipynb` | Load a checkpoint, visualise lifting map, measure $S_{0.75}$ generator similarity | seconds |
 | `baselines.ipynb` | Run TICA & GLASSO; load and plot pre-computed baseline results | ~10 min |
 
 ---
@@ -143,8 +143,8 @@ Downloaded data is cached locally and is referenced by session ID in `run-config
 ## Citation
 
 ```bibtex
-@misc{efe2026revealing,
-  title         = {Revealing Latent Domains via Unsupervised Symmetry Discovery},
+@misc{efe2026blind,
+  title         = {Blind Recovery of Latent Domains via Unsupervised Symmetry Discovery},
   author        = {Onur Efe and Arkadas {\"O}zak{\i}n},
   year          = {2026},
   note          = {Preprint}
