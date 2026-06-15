@@ -80,12 +80,12 @@ blind-domain-recovery/
 
 ## Notebooks
 
-| Notebook | Description | Time |
-|---|---|---|
-| `quickstart.ipynb` | Minimal demo: train on 1-D Gaussians, inspect learned generators | ~5 min |
-| `train.ipynb` | Full training run from any `run-configs/*.json` | hours |
-| `evaluate.ipynb` | Load a checkpoint, visualise lifting map, measure $S_{0.75}$ generator similarity | seconds |
-| `baselines.ipynb` | Run TICA & GLASSO; load and plot pre-computed baseline results | ~10 min |
+| Notebook | Description |
+|---|---|
+| `quickstart.ipynb` | Minimal demo: train on 1-D Gaussians, inspect learned generators |
+| `train.ipynb` | Full training run from any `run-configs/*.json` |
+| `evaluate.ipynb` | Load a checkpoint, visualise lifting map, measure $S_{0.75}$ generator similarity |
+| `baselines.ipynb` | Run TICA & GLASSO; load and plot pre-computed baseline results |
 
 ---
 
