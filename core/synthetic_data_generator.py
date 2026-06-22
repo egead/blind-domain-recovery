@@ -2,6 +2,7 @@ import numpy as np
 from scipy import special
 import tensorflow as tf
 from core.neural_data_preprocessors import NeuropixelPreprocessor
+from core.head_direction_preprocessor import HeadDirectionPreprocessor
 
 class DataGenerator:
     def __init__(
@@ -114,6 +115,8 @@ class DataGenerator:
             return self._generate_ising(feature)
         elif ftype == "neural_npixel":
             return self._generate_neural_neuropixel(feature)
+        elif ftype == "neural_hd":
+            return self._generate_neural_head_direction(feature)
         else:
             raise ValueError(f"Feature type '{ftype}' is not defined.")
             
@@ -172,7 +175,54 @@ class DataGenerator:
         params = np.stack([orientations, spatial_freqes], axis=-1)
         
         return (x, x_hidden, params)
-        
+
+    def _generate_neural_head_direction(self, feature):
+        if not hasattr(self, "_cache"):
+            session_path = feature["session_path"]
+            bin_size = feature.get("bin_size", 0.025)
+            smoothing_std = feature.get("smoothing_std", 0.05)
+            cache_dir = feature.get("cache_dir", "th1_data")
+            target_structure = feature.get("target_structure", "adn")
+
+            processor = HeadDirectionPreprocessor(session_path=session_path,
+                                                  bin_size=bin_size,
+                                                  smoothing_std=smoothing_std,
+                                                  target_structure=target_structure,
+                                                  cache_dir=cache_dir)
+
+            spks, mov, params = processor.generate_dataset()
+
+            normalize = feature.get("normalize_neurons", False)
+            num_neurons = feature.get("num_neurons", np.shape(spks)[1])
+
+            if num_neurons < np.shape(spks)[1]:
+                spks = spks[:, :num_neurons]
+
+            if normalize:
+                spks = self._demean_and_normalize(spks, axis=0)
+
+            self._cache = {}
+            self._cache["spikes"] = spks
+            self._cache["mov"] = mov
+            self._cache["params"] = params
+            self._cache["n_samples"] = self._cache["spikes"].shape[0]
+
+        rng = np.random.default_rng(seed=self._batch_counter)
+
+        N = self._cache["n_samples"]
+
+        element_idxs = np.arange(N)
+        batch_sample_idxs = rng.choice(element_idxs, size=self.batch_size, replace=True)
+
+        x = self._cache["spikes"][batch_sample_idxs]
+        x_hidden = self._cache["mov"][batch_sample_idxs]
+
+        orientations = self._cache["params"]["orientation"].to_numpy()[batch_sample_idxs]
+        spatial_freqes = self._cache["params"]["spatial_frequency"].to_numpy()[batch_sample_idxs]
+        params = np.stack([orientations, spatial_freqes], axis=-1)
+
+        return (x, x_hidden, params)
+
     def _demean_and_normalize(self, x, axis=0):
         z = (x - np.mean(x, axis=axis, keepdims=True)) / (self.eps + np.std(x, axis=axis, keepdims=True))
         return z

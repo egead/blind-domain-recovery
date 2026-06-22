@@ -11,6 +11,7 @@ __pycache__/
 *.mseed
 allen_data/
 allen_data_cache/
+th1_data/
 data/
 sensitivity_analysis*/
 all_experiments.json

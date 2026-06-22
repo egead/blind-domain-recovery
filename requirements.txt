@@ -5,5 +5,6 @@ matplotlib>=3.7.0
 jupyter>=1.0.0
 gitpython>=3.1.0
 allensdk>=2.15.0
+pynapple>=0.11.0
 umap-learn>=0.5.3
 scikit-learn>=1.2.0
