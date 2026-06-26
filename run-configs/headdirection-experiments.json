@@ -18,13 +18,11 @@
                     "num_neurons": 20
                 }
             ],
-            "dims": 1,
             "n_components": 20,
             "noise_normalized_std": 0.0,
             "batch_size": 2500
         },
         "model_params": {
-            "dims": 1,
             "num_lenses": 1,
             "dilations": [
                 1
