@@ -39,6 +39,7 @@
             "uniformity_estimator_params": [
                 {
                     "group_dims": 1,
+                    "cyclic_boundary": true,
                     "layer_properties": [
                         {
                             "filters": 4,
@@ -73,7 +74,7 @@
             "total_correlation_minimization_reg_coeff": 0.2,
             "joint_entropy_maximization_reg_coeff": 0.2
         },
-        "apply_stochastic_mixing": true,
+        "apply_stochastic_mixing": false,
         "stochastic_mixing_steps": 20,
         "stochastic_mixing_probability": 0.5,
         "num_training_batches": 100,
