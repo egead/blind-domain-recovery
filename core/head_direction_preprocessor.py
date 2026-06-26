@@ -35,8 +35,8 @@ class HeadDirectionPreprocessor:
         self.data = nap.load_session(session_path, "neurosuite")
 
         self.spikes = self.data.spikes
-        self.angle = self.data.position["ry"]
-        self.wake_epoch = self.data.epochs["wake"]
+        self.angle = self._load_head_angle(session_path)
+        self.wake_epoch = self._load_wake_epoch(session_path)
 
         self.units = self._select_units()
         self.num_neurons = len(self.units)
@@ -57,7 +57,9 @@ class HeadDirectionPreprocessor:
         rates = count / self.bin_size
 
         if self.smoothing_std is not None and self.smoothing_std > 0:
-            rates = rates.smooth(self.smoothing_std)
+            std_bins = max(1, int(round(self.smoothing_std / self.bin_size)))
+            window_bins = max(std_bins, int(6 * std_bins) | 1)
+            rates = rates.smooth(std_bins, window_bins)
 
         rate_centers = rates.index.values
         head_angle = np.interp(rate_centers,
@@ -90,10 +92,59 @@ class HeadDirectionPreprocessor:
 
         return spks, mov, params
 
+    def _session_basename(self, session_path: str) -> str:
+        return os.path.join(session_path, os.path.basename(os.path.normpath(session_path)))
+
+    def _whl_rate(self, session_path: str) -> float:
+        xml_path = self._session_basename(session_path) + ".xml"
+        sampling_rate = 20000.0
+        try:
+            import xml.etree.ElementTree as ET
+            root = ET.parse(xml_path).getroot()
+            node = root.find(".//acquisitionSystem/samplingRate")
+            if node is None:
+                node = root.find(".//samplingRate")
+            if node is not None:
+                sampling_rate = float(node.text)
+        except Exception as e:
+            print(f"   -> ⚠ Could not read samplingRate from XML ({e}); assuming 20000 Hz.")
+        return sampling_rate / 512.0
+
+    def _load_head_angle(self, session_path: str):
+        whl_path = self._session_basename(session_path) + ".whl"
+        print(f"   -> Reading head angle from {whl_path}")
+        whl = np.loadtxt(whl_path, dtype=np.float32)
+        if whl.ndim != 2 or whl.shape[1] < 4:
+            raise ValueError(f"Expected a 4-column .whl file, got shape {whl.shape}.")
+
+        x1, y1, x2, y2 = whl[:, 0], whl[:, 1], whl[:, 2], whl[:, 3]
+
+        tracked = (x1 >= 0) & (y1 >= 0) & (x2 >= 0) & (y2 >= 0)
+
+        angle = np.mod(np.arctan2(y2 - y1, x2 - x1), 2.0 * np.pi)
+        angle[~tracked] = np.nan
+
+        rate = self._whl_rate(session_path)
+        t = np.arange(whl.shape[0], dtype=np.float64) / rate
+
+        valid = np.isfinite(angle)
+        return nap.Tsd(t=t[valid], d=angle[valid].astype(np.float64))
+
+    def _load_wake_epoch(self, session_path: str):
+        states_path = self._session_basename(session_path) + ".states.Wake"
+        print(f"   -> Reading wake epoch from {states_path}")
+        intervals = np.loadtxt(states_path, dtype=np.float64, ndmin=2)
+        if intervals.shape[1] < 2:
+            raise ValueError(f"Expected start/end columns in {states_path}, got shape {intervals.shape}.")
+        return nap.IntervalSet(start=intervals[:, 0], end=intervals[:, 1])
+
     def _select_units(self):
         units = self.spikes
         if self.target_structure is not None and "location" in units.metadata_columns:
-            units = units[units.location == self.target_structure]
+            loc_vals = units.get_info("location")
+            loc = np.array([str(v).lower() for v in loc_vals])
+            keep_locs = np.array(units.keys())[loc == self.target_structure.lower()]
+            units = units[keep_locs]
 
         units = units.getby_threshold("rate", self.DEFAULT_MIN_RATE)
 
@@ -110,7 +161,8 @@ class HeadDirectionPreprocessor:
             print("   -> ⚠ No units passed the HD-information threshold; keeping all.")
             keep = np.ones(len(info), dtype=bool)
 
-        units = units[keep]
+        keep_keys = np.asarray(info.index)[keep]
+        units = units[keep_keys]
         self._hd_info_order = np.argsort(info.values[keep])[::-1]
         return units
 
