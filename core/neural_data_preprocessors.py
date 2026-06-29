@@ -3,7 +3,6 @@ import os
 import pandas as pd
 from scipy.stats import poisson
 from typing import Tuple, Optional
-from allensdk.brain_observatory.ecephys.ecephys_project_cache import EcephysProjectCache
   
 class NeuropixelPreprocessor:
     """
@@ -206,7 +205,8 @@ class NeuropixelPreprocessor:
         return params_df
 
     # --- Standard Helpers (Unchanged) ---
-    def _initialize_cache(self, directory: str) -> EcephysProjectCache:
+    def _initialize_cache(self, directory: str):
+        from allensdk.brain_observatory.ecephys.ecephys_project_cache import EcephysProjectCache
         manifest_path = os.path.join(directory, self.MANIFEST_FILE)
         return EcephysProjectCache.from_warehouse(manifest=manifest_path)
 
