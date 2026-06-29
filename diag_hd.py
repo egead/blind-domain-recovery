@@ -70,7 +70,7 @@ print("label-free PCA-top2 arctan2 r_cc:", round(circ_corr(true_angle, pca_phase
 print("\n== recover_phase r_cc under different axis choices ==")
 def rcc(rec): return round(best_circular_correlation(true_angle, rec)[0], 4)
 print("analyze, channel=0           :", rcc(recover_phase(y_an, channel=0)))
-yp2 = y_plain[:, 0, :] if y_plain.ndim == 3 else y_plain
+yp2 = y_plain[:, :, 0] if y_plain.ndim == 3 else y_plain
 print("plain squeezed (b,positions) :", rcc(recover_phase(yp2)))
 print("plain, channel=0 (orig call) :", rcc(recover_phase(y_plain, channel=0)))
 
