@@ -48,6 +48,25 @@ print("\n== LIFTED features vs head direction ==")
 print("best |corr| lifted~cos:", round(best_corr(flat, c), 4))
 print("best |corr| lifted~sin:", round(best_corr(flat, s), 4))
 
+def circ_corr(a, b):
+    am = np.angle(np.mean(np.exp(1j * a))); bm = np.angle(np.mean(np.exp(1j * b)))
+    da = np.sin(a - am); db = np.sin(b - bm)
+    return abs(np.sum(da * db) / (np.sqrt(np.sum(da**2) * np.sum(db**2)) + 1e-12))
+
+print("\n== DECIDER: linear decode of lifted features -> angle ==")
+F = flat - flat.mean(0, keepdims=True)
+X = np.c_[F, np.ones(len(F))]
+wc = np.linalg.lstsq(X, c, rcond=None)[0]
+ws = np.linalg.lstsq(X, s, rcond=None)[0]
+pred = np.arctan2(X @ ws, X @ wc)
+print("lifted linear-decode r_cc:", round(circ_corr(true_angle, pred), 4),
+      "  (~0.8 = readout bug | ~0.3 = ring collapsed, retrain)")
+
+U, S_, Vt = np.linalg.svd(F, full_matrices=False)
+pc12 = U[:, :2] * S_[:2]
+pca_phase = np.mod(np.arctan2(pc12[:, 1], pc12[:, 0]), 2 * np.pi)
+print("label-free PCA-top2 arctan2 r_cc:", round(circ_corr(true_angle, pca_phase), 4))
+
 print("\n== recover_phase r_cc under different axis choices ==")
 def rcc(rec): return round(best_circular_correlation(true_angle, rec)[0], 4)
 print("analyze, channel=0           :", rcc(recover_phase(y_an, channel=0)))
