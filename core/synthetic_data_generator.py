@@ -207,12 +207,21 @@ class DataGenerator:
             self._cache["params"] = params
             self._cache["n_samples"] = self._cache["spikes"].shape[0]
 
+            n_occ_bins = feature.get("occupancy_bins", 36)
+            ang = np.deg2rad(params["orientation"].to_numpy().astype(np.float64))
+            edges = np.linspace(0.0, 2.0 * np.pi, n_occ_bins + 1)
+            bin_idx = np.clip(np.digitize(ang, edges) - 1, 0, n_occ_bins - 1)
+            counts = np.bincount(bin_idx, minlength=n_occ_bins).astype(np.float64)
+            w = 1.0 / (counts[bin_idx] + 1e-9)
+            self._cache["sample_weights"] = (w / w.sum()).astype(np.float64)
+
         rng = np.random.default_rng(seed=self._batch_counter)
 
         N = self._cache["n_samples"]
 
         element_idxs = np.arange(N)
-        batch_sample_idxs = rng.choice(element_idxs, size=self.batch_size, replace=True)
+        batch_sample_idxs = rng.choice(element_idxs, size=self.batch_size, replace=True,
+                                       p=self._cache["sample_weights"])
 
         x = self._cache["spikes"][batch_sample_idxs]
         x_hidden = self._cache["mov"][batch_sample_idxs]
