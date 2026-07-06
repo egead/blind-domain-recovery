@@ -24,8 +24,8 @@
                 1
             ],
             "use_linear_map": false,
-            "intrinsic_dimensionality": 3,
-            "lifting_space_dims": 63,
+            "intrinsic_dimensionality": 6,
+            "lifting_space_dims": 1061,
             "lifting_layer_params": {
                 "axes_widths": [
                     63
@@ -37,25 +37,37 @@
                     "group_dims": 1,
                     "layer_properties": [
                         {
-                            "filters": 4,
+                            "filters": 8,
                             "kernel_size": 7,
                             "strides": 1,
                             "activation": "elu"
                         },
                         {
-                            "filters": 6,
+                            "filters": 8,
                             "kernel_size": 5,
                             "strides": 1,
                             "activation": "elu"
                         },
                         {
-                            "filters": 8,
+                            "filters": 16,
+                            "kernel_size": 5,
+                            "strides": 1,
+                            "activation": "elu"
+                        },
+                        {
+                            "filters": 16,
                             "kernel_size": 3,
                             "strides": 1,
                             "activation": "elu"
                         },
                         {
-                            "filters": 8,
+                            "filters": 16,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "activation": "elu"
+                        },
+                        {
+                            "filters": 16,
                             "kernel_size": 3,
                             "strides": 1,
                             "activation": "elu"
