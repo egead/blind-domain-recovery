@@ -64,13 +64,15 @@ blind-domain-recovery/
 ├── run-configs/                   # JSON experiment configurations
 │   ├── waveform-experiments.json  # 1-D waveform experiments (Gaussian & Legendre, 5 seeds each)
 │   ├── mnist-experiments.json     # 2-D MNIST translation experiments
-│   └── neuropixel-experiments.json  # Allen Brain Neuropixel experiments
+│   ├── neuropixel-experiments.json  # Allen Brain Neuropixel experiments
+│   └── nanoparticle-experiments.json  # Nanoparticle tracking depth recovery
 │
 ├── notebooks/
 │   ├── quickstart.ipynb           # Minimal end-to-end demo (~5 min)
 │   ├── train.ipynb                # Full training from a JSON config
 │   ├── evaluate.ipynb             # Load weights, visualise generators & lifting map
-│   └── baselines.ipynb            # Run and compare baselines
+│   ├── baselines.ipynb            # Run and compare baselines
+│   └── nanoparticle.ipynb         # Recover latent depth from an NTA video
 │
 ├── neuropixel-session-download.py # Allen Brain dataset download script
 └── experiment_runner.py           # CLI multi-GPU experiment launcher
@@ -86,6 +88,7 @@ blind-domain-recovery/
 | `train.ipynb` | Full training run from any `run-configs/*.json` |
 | `evaluate.ipynb` | Load a checkpoint, visualise lifting map, measure $S_{0.75}$ generator similarity |
 | `baselines.ipynb` | Run TICA & GLASSO; load and plot pre-computed baseline results |
+| `nanoparticle.ipynb` | Recover latent depth from a nanoparticle tracking video|
 
 ---
 

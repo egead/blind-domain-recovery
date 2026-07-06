@@ -9,6 +9,8 @@ __pycache__/
 *.mp4
 *.npy
 *.mseed
+*.rar
+*.avi
 allen_data/
 allen_data_cache/
 data/
@@ -20,3 +22,5 @@ livecell-images/
 .vscode/
 *.ipynb_checkpoints/
 .ipynb_checkpoints/
+
+
