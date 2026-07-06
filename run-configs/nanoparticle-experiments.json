@@ -18,7 +18,6 @@
             "batch_size": 2500
         },
         "model_params": {
-            "dims": 1,
             "num_lenses": 1,
             "dilations": [
                 1
