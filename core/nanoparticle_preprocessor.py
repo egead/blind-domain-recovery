@@ -11,12 +11,18 @@ class NanoparticlePreprocessor:
         min_area=2,
         max_area=200,
         blur_ksize=3,
+        min_separation=None,
+        peak_rel_threshold=0.5,
+        peak_min_distance=3,
     ):
         self.crop_size = crop_size
         self.threshold_percentile = threshold_percentile
         self.min_area = min_area
         self.max_area = max_area
         self.blur_ksize = blur_ksize
+        self.min_separation = crop_size if min_separation is None else min_separation
+        self.peak_rel_threshold = peak_rel_threshold
+        self.peak_min_distance = peak_min_distance
 
     def process_video(self, video_path):
         cap = cv2.VideoCapture(video_path)
@@ -67,14 +73,31 @@ class NanoparticlePreprocessor:
     def _extract_crops(self, gray, centers):
         h, w = gray.shape
         half = self.crop_size // 2
+        pts = np.array(centers, dtype=np.float32) if centers else np.empty((0, 2), np.float32)
         out = []
         for cx, cy in centers:
+            if self._has_neighbor(cx, cy, pts):
+                continue
             x0, x1 = cx - half, cx + half + 1
             y0, y1 = cy - half, cy + half + 1
             if x0 < 0 or y0 < 0 or x1 > w or y1 > h:
                 continue
-            out.append(gray[y0:y1, x0:x1])
+            crop = gray[y0:y1, x0:x1]
+            if self._count_peaks(crop) != 1:
+                continue
+            out.append(crop)
         return out
+
+    def _has_neighbor(self, cx, cy, pts):
+        d2 = (pts[:, 0] - cx) ** 2 + (pts[:, 1] - cy) ** 2
+        return int((d2 < self.min_separation ** 2).sum()) > 1
+
+    def _count_peaks(self, crop):
+        peak_level = self.peak_rel_threshold * float(crop.max())
+        k = 2 * self.peak_min_distance + 1
+        dilated = cv2.dilate(crop, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k, k)))
+        is_peak = (crop == dilated) & (crop >= peak_level)
+        return int(is_peak.sum())
 
     def _flatten_and_normalize(self, crops, eps=1e-8):
         flat = crops.reshape(crops.shape[0], -1)
@@ -111,6 +134,9 @@ def main():
     parser.add_argument("--min-area", type=int, default=2)
     parser.add_argument("--max-area", type=int, default=200)
     parser.add_argument("--blur-ksize", type=int, default=3)
+    parser.add_argument("--min-separation", type=int, default=None)
+    parser.add_argument("--peak-rel-threshold", type=float, default=0.5)
+    parser.add_argument("--peak-min-distance", type=int, default=3)
     parser.add_argument("--sample-grid", type=str, default=None)
     args = parser.parse_args()
 
@@ -120,6 +146,9 @@ def main():
         min_area=args.min_area,
         max_area=args.max_area,
         blur_ksize=args.blur_ksize,
+        min_separation=args.min_separation,
+        peak_rel_threshold=args.peak_rel_threshold,
+        peak_min_distance=args.peak_min_distance,
     )
 
     crops = pre.process_video(args.video)
