@@ -22,5 +22,5 @@ livecell-images/
 .vscode/
 *.ipynb_checkpoints/
 .ipynb_checkpoints/
-
+plans/
 
