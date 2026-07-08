@@ -1,5 +1,5 @@
 {
-    "NANOPARTICLE-EXP-FILTERED": {
+    "NANOPARTICLE-EXP-DEPTH": {
         "seed": 3,
         "gpus": [
             0
@@ -9,7 +9,7 @@
             "features": [
                 {
                     "type": "custom",
-                    "data_path": "nanoparticle_data/crops_31_single.npy"
+                    "data_path": "nanoparticle_data/crops_31_depth.npy"
                 }
             ],
             "dims": 1,
@@ -36,37 +36,37 @@
                     "group_dims": 1,
                     "layer_properties": [
                         {
-                            "filters": 8,
+                            "filters": 4,
                             "kernel_size": 7,
                             "strides": 1,
                             "activation": "elu"
                         },
                         {
+                            "filters": 4,
+                            "kernel_size": 5,
+                            "strides": 1,
+                            "activation": "elu"
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 5,
+                            "strides": 1,
+                            "activation": "elu"
+                        },
+                        {
+                            "filters": 6,
+                            "kernel_size": 3,
+                            "strides": 1,
+                            "activation": "elu"
+                        },
+                        {
                             "filters": 8,
-                            "kernel_size": 5,
-                            "strides": 1,
-                            "activation": "elu"
-                        },
-                        {
-                            "filters": 16,
-                            "kernel_size": 5,
-                            "strides": 1,
-                            "activation": "elu"
-                        },
-                        {
-                            "filters": 16,
                             "kernel_size": 3,
                             "strides": 1,
                             "activation": "elu"
                         },
                         {
-                            "filters": 16,
-                            "kernel_size": 3,
-                            "strides": 1,
-                            "activation": "elu"
-                        },
-                        {
-                            "filters": 16,
+                            "filters": 8,
                             "kernel_size": 3,
                             "strides": 1,
                             "activation": "elu"
@@ -86,9 +86,9 @@
         "num_training_batches": 100,
         "early_stop_epoch": 1000,
         "training_duration_in_epochs": 5000,
-        "model_optimizer_starting_lr": 1e-4,
-        "model_optimizer_ending_lr": 1e-5,
-        "estimators_optimizer_starting_lr": 1e-3,
-        "estimators_optimizer_ending_lr": 1e-4
+        "model_optimizer_starting_lr": 0.0001,
+        "model_optimizer_ending_lr": 1e-05,
+        "estimators_optimizer_starting_lr": 0.001,
+        "estimators_optimizer_ending_lr": 0.0001
     }
 }
