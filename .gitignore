@@ -1,4 +1,4 @@
-experiments/
+experiments/*
 plots/
 *.h5
 __pycache__/
@@ -23,4 +23,7 @@ livecell-images/
 *.ipynb_checkpoints/
 .ipynb_checkpoints/
 plans/
+
+!experiments/NANOPARTICLE-EXP-DEPTH/
+!experiments/NANOPARTICLE-EXP-DEPTH/**
 
